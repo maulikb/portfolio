@@ -65,29 +65,29 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID;
-  if (!GA_ID) {
-    throw new Error("Missing Google Analytics ID");
-  }
+  // const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID;
+  // if (!GA_ID) {
+  //   throw new Error("Missing Google Analytics ID");
+  // }
 
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
-          fontHeading.variable
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-          <Analytics />
-          <Toaster />
-          <ModalProvider />
-        </ThemeProvider>
-      </body>
-      <GoogleAnalytics gaId={GA_ID} />
-    </html>
-  );
+  // return (
+  //   <html lang="en" suppressHydrationWarning>
+  //     <head />
+  //     <body
+  //       className={cn(
+  //         "min-h-screen bg-background font-sans antialiased",
+  //         fontSans.variable,
+  //         fontHeading.variable
+  //       )}
+  //     >
+  //       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+  //         {children}
+  //         <Analytics />
+  //         <Toaster />
+  //         <ModalProvider />
+  //       </ThemeProvider>
+  //     </body>
+  //     <GoogleAnalytics gaId={GA_ID} />
+  //   </html>
+  // );
 }
